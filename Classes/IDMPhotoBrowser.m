@@ -1024,12 +1024,6 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 	page.frame = [self frameForPageAtIndex:index];
     page.tag = PAGE_INDEX_TAG_OFFSET + index;
     page.photo = [self photoAtIndex:index];
-
-    __block __weak IDMPhoto *photo = (IDMPhoto*)page.photo;
-    __weak IDMZoomingScrollView* weakPage = page;
-    photo.progressUpdateBlock = ^(CGFloat progress){
-        [weakPage setProgress:progress forPhoto:photo];
-    };
 }
 
 - (IDMZoomingScrollView *)dequeueRecycledPage {

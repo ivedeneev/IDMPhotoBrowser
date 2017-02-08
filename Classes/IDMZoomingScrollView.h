@@ -25,7 +25,8 @@
     
 	IDMTapDetectingView *_tapView; // for background taps
     
-    DACircularProgressView *_progressView;
+    
+    UIActivityIndicatorView *_progressView;
 }
 
 @property (nonatomic, strong) IDMTapDetectingImageView *photoImageView;
@@ -36,7 +37,6 @@
 - (id)initWithPhotoBrowser:(IDMPhotoBrowser *)browser;
 - (void)displayImage;
 - (void)displayImageFailure;
-- (void)setProgress:(CGFloat)progress forPhoto:(IDMPhoto*)photo;
 - (void)setMaxMinZoomScalesForCurrentBounds;
 - (void)prepareForReuse;
 
